@@ -1,6 +1,6 @@
 # 🚀 Naova App - Sistema de Cotizaciones
 
-Aplicación web para gestión de cotizaciones, productos y proveedores.
+Aplicación web completa para gestión de cotizaciones, productos y proveedores.
 
 ## 📋 Características
 
@@ -17,93 +17,120 @@ Aplicación web para gestión de cotizaciones, productos y proveedores.
 - **Frontend**: React + TypeScript + Vite + Tailwind CSS
 - **Backend**: Node.js + Express + PostgreSQL
 - **Base de datos**: Supabase
-- **Deployment**: Vercel (Frontend) + Railway (Backend)
+- **Autenticación**: JWT
 
-## 🚀 Despliegue en Vercel
+## 🚀 Instalación
 
-### Opción 1: Solo Frontend (Recomendado)
+### Prerrequisitos
+- Node.js (v16 o superior)
+- npm o yarn
+- Cuenta en Supabase
 
-1. **Desplegar Backend en Railway:**
+### Pasos de instalación
+
+1. **Clonar el repositorio**
    ```bash
-   # Crear cuenta en Railway.app
-   # Conectar tu repositorio de GitHub
-   # Configurar variables de entorno:
-   DATABASE_URL=tu_url_de_supabase
-   JWT_SECRET=tu_secret_key
+   git clone https://github.com/victor-4502/-naova-app.git
+   cd -naova-app
    ```
 
-2. **Desplegar Frontend en Vercel:**
+2. **Instalar dependencias del backend**
    ```bash
-   # Instalar Vercel CLI
-   npm i -g vercel
-   
-   # Login en Vercel
-   vercel login
-   
-   # Desplegar
-   vercel
+   cd backend
+   npm install
    ```
 
-3. **Configurar variables de entorno en Vercel:**
-   - `REACT_APP_API_URL=https://tu-backend.railway.app`
-
-### Opción 2: Todo en Vercel
-
-1. **Configurar Vercel:**
+3. **Configurar variables de entorno**
    ```bash
-   # Crear vercel.json (ya incluido)
-   # Configurar variables de entorno en Vercel Dashboard
+   cp env.example .env
+   ```
+   Edita `.env` con tu configuración de Supabase:
+   ```
+   DATABASE_URL=postgresql://postgres.cwjspepvbxgqwggxcqrv:[TU-PASSWORD]@aws-0-us-east-2.pooler.supabase.com:6543/postgres
+   JWT_SECRET=tu-jwt-secret-aqui
+   PORT=5000
    ```
 
-2. **Desplegar:**
+4. **Instalar dependencias del frontend**
    ```bash
-   vercel --prod
+   cd ../frontend
+   npm install
    ```
 
-## 🔧 Variables de Entorno
+5. **Iniciar el backend**
+   ```bash
+   cd ../backend
+   npm start
+   ```
 
-### Backend (.env)
-```env
-DATABASE_URL=postgresql://...
-JWT_SECRET=tu_secret_key
-FRONTEND_URL=http://localhost:3000
-```
+6. **Iniciar el frontend**
+   ```bash
+   cd ../frontend
+   npm run dev
+   ```
 
-### Frontend (Vercel)
-```env
-REACT_APP_API_URL=https://tu-backend.railway.app
-```
-
-## 📁 Estructura del Proyecto
+## 📁 Estructura del proyecto
 
 ```
-naova_app/
-├── frontend/          # React + TypeScript
-├── backend/           # Node.js + Express
-├── vercel.json        # Configuración Vercel
+naova-app/
+├── backend/                 # Servidor Node.js + Express
+│   ├── src/
+│   │   ├── routes/         # Rutas de la API
+│   │   └── database/       # Configuración de base de datos
+│   └── package.json
+├── frontend/               # Aplicación React + TypeScript
+│   ├── src/
+│   │   ├── components/     # Componentes React
+│   │   ├── pages/         # Páginas de la aplicación
+│   │   └── config/        # Configuración de API
+│   └── package.json
 └── README.md
 ```
 
-## 🎯 URLs de Despliegue
+## 🔧 Scripts útiles
 
-- **Frontend**: https://tu-app.vercel.app
-- **Backend**: https://tu-backend.railway.app
-- **Base de datos**: Supabase Dashboard
+### Backend
+```bash
+npm start          # Iniciar servidor
+npm run dev        # Iniciar en modo desarrollo
+```
 
-## 🔄 Flujo de Despliegue
+### Frontend
+```bash
+npm run dev        # Iniciar servidor de desarrollo
+npm run build      # Construir para producción
+npm run preview    # Vista previa de producción
+```
 
-1. **Desarrollo local** → `npm run dev`
-2. **Commit cambios** → `git add . && git commit -m "update"`
-3. **Push a GitHub** → `git push origin main`
-4. **Despliegue automático** → Vercel detecta cambios y actualiza
+## 👥 Roles de usuario
 
-## 📞 Soporte
+- **Admin**: Gestión completa del sistema
+- **Cliente**: Crear cotizaciones y ver productos
+- **Proveedor**: Ver pedidos asignados
 
-Para problemas de despliegue:
-1. Verificar variables de entorno
-2. Revisar logs en Vercel Dashboard
-3. Confirmar conexión a Supabase
+## 📊 Base de datos
 
----
+El proyecto utiliza Supabase (PostgreSQL) con las siguientes tablas principales:
+- `users` - Usuarios del sistema
+- `products` - Productos disponibles
+- `providers` - Proveedores
+- `quotations` - Cotizaciones
+- `quotation_items` - Items de cotizaciones
 
-**¡Tu aplicación estará disponible en https://tu-app.vercel.app!** 🎉 
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+
+## 📞 Contacto
+
+Victor - [@victor-4502](https://github.com/victor-4502)
+
+Link del proyecto: [https://github.com/victor-4502/-naova-app](https://github.com/victor-4502/-naova-app) 
