@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-naova-gray-50 text-naova-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-naova-blue-800 hover:bg-naova-blue-900 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-naova-blue-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-naova-yellow-500 hover:bg-naova-yellow-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-naova-yellow-500 focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-naova-blue-800 text-naova-blue-800 hover:bg-naova-blue-800 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-naova-blue-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-naova p-6 border border-naova-gray-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-naova-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-naova-blue-500 focus:border-transparent transition-colors duration-200;
+  }
+  
+  .search-input {
+    @apply w-full px-6 py-4 text-lg border-2 border-naova-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-naova-blue-500 focus:border-transparent transition-all duration-200 shadow-sm;
+  }
+} 

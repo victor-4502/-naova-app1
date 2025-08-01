@@ -1,0 +1,4 @@
+name,description,category,unit,keywords,specifications,price,provider_id,stock_quantity,delivery_time_hours
+Martillo de prueba,Martillo para pruebas,Herramientas,unidad,martillo,prueba,10000,1,50,24
+Taladro de prueba,Taladro para pruebas,Herramientas,unidad,taladro,prueba,25000,2,30,12
+Sierra de prueba,Sierra para pruebas,Herramientas,unidad,sierra,prueba,18000,3,20,8 

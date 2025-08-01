@@ -1,0 +1,8 @@
+id,username,email,password,role,created_at,updated_at
+1,admin,admin@naova.com,$2b$10$eIbsiRPUpsxlTTCpynt7qe3uVCjKl380wFuX2j5qxpRIZ5JMWFfym,admin,,
+2,cliente1,cliente1@naova.com,$2b$10$DS0B9kUCaZIP//KZgHtaOex0U.l/IJ2oLtrIPPGCX0AdxnHg8WbbS,cliente,,
+3,cliente2,cliente2@naova.com,$2b$10$36xqIvlTODC/8qF3ubVywu27qfiWNtKIzMcXn3jTaG6i.tza.P8tS,cliente,,
+4,cliente3,cliente3@naova.com,$2b$10$W6DynNPsGEMXowUSIM5w.Oo2S8yA0/S9dPLQjvnmRs8GaCehMNRla,cliente,,
+5,proveedor1,proveedor1@naova.com,$2b$10$a4svTp8IYMNPYqtSBo52gegDehrxavpQVmqJ2fbiFi5/0Sh9Hr4bW,proveedor,,
+6,proveedor2,proveedor2@naova.com,$2b$10$4GcsNmhwpBEvjYAfSEW5ce7XpVUpsYd3QIkFdN1RbciiVi/YFyu52,proveedor,,
+7,proveedor3,proveedor3@naova.com,$2b$10$X1udHlLDLpDxEpz3tAQ24.QwIzHq66X/UULATvDH7SpaugQDkqVxS,proveedor,,
